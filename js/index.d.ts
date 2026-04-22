@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type AdSlotProps = {
-  dfpNetworkId: string;
+  dfpNetworkId?: string;
   adUnit: string;
   sizes: Array<number[] | string>;
   sizeMapping: Array<{
@@ -51,11 +51,25 @@ export type DFPSlotsProviderProps = {
     sizes: Array<number[] | string>;
   }>;
   dfpTargetingArguments: Record<string, string>;
+  autoReload?: AutoReloadConfig;
+  personalizedAds?: boolean;
+  cookieOption?: boolean;
+  singleRequest?: boolean;
+  disableInitialLoad?: boolean;
+  collapseEmptyDivs?: boolean;
+  lazyLoad?: LazyLoadConfig;
+  limitedAds?: boolean;
 };
 
 export function DFPSlotsProvider(
   props: DFPSlotsProviderProps,
 ): React.ReactElement;
+
+export type LazyLoadConfig = {
+  fetchMarginPercent?: number;
+  renderMarginPercent?: number;
+  mobileScaling?: number;
+};
 
 export class DFPManager {
   static configurePersonalizedAds: (personalizedAds: boolean) => void;
