@@ -34,6 +34,12 @@
   ],
   "main": "lib/react-dfp.js",
   "module": "lib/react-dfp.mjs",
+  "files": [
+    "LICENSE",
+    "lib",
+    "Readme.md",
+    "js/index.d.ts"
+  ],
   "peerDependencies": {
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0"
