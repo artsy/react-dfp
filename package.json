@@ -37,7 +37,8 @@
   "files": [
     "LICENSE",
     "lib",
-    "Readme.md"
+    "Readme.md",
+    "js/index.d.ts"
   ],
   "peerDependencies": {
     "react": ">=17.0.0",
